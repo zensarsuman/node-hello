@@ -21,7 +21,7 @@ pipeline {
         scannerHome = tool 'SAST-APPSEC'
     }
     steps {
-        withSonarQubeEnv('sonarqube') {
+        withSonarQubeEnv('SonarQubeServer') {
             sh "${scannerHome}/bin/sonar-scanner"
         }
         timeout(time: 10, unit: 'MINUTES') {
