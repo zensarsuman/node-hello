@@ -18,7 +18,7 @@ pipeline {
         
    stage('Sonarqube') {
     environment {
-        scannerHome = tool 'SAST-APPSEC
+        scannerHome = tool 'SAST-APPSEC'
     }
     steps {
         withSonarQubeEnv('sonarqube') {
